@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "rocket") (type "KiCad") (uri "C:/Users/Joe/Documents/KiCad/10.0/footprints/rocket.pretty") (options "") (descr ""))
+	(lib (name "rocket") (type "KiCad") (uri "C:/Users/Joe/Documents/KiCad/10.0/footprints/rocket.pretty") (options "") (descr ""))
+)
