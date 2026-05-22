@@ -534,34 +534,34 @@ def print_results(results: dict) -> None:
 # Example usage
 if __name__ == "__main__":
     
-    # tiny_rocket = Rocket(
-    #     name="Tiny Rocket",
-    #     length_mm=254,
-    #     diameter_mm=18,
-    #     mass=18,  # grams
-    #     drag_coefficient=0.65
-    # )
-    # tiny_motor = Motor(
-    #     name="1/4A3-3T",
-    #     diameter_mm=13,
-    #     length_mm=44,
-    #     total_impulse=0.625,  # N-sec
-    #     thrust_duration=0.25,  # seconds
-    #     max_thrust=4.90,  # N
-    #     time_delay=3,  # seconds
-    #     max_lift_weight=28,  # grams
-    #     total_mass=6,  # grams
-    #     propellant_mass=2.3  # grams
-    # )
+    tiny_rocket = Rocket(
+        name="Tiny Rocket",
+        length_mm=254,
+        diameter_mm=18,
+        mass=18,  # grams
+        drag_coefficient=0.65
+    )
+    tiny_motor = Motor(
+        name="1/4A3-3T",
+        diameter_mm=13,
+        length_mm=44,
+        total_impulse=0.625,  # N-sec
+        thrust_duration=0.25,  # seconds
+        max_thrust=4.90,  # N
+        time_delay=3,  # seconds
+        max_lift_weight=28,  # grams
+        total_mass=6,  # grams
+        propellant_mass=2.3  # grams
+    )
 
     medium_rocket = Rocket(
         name="Medium Rocket",
         length_mm=381,
         diameter_mm=24,
-        mass=210,  # grams
+        mass=196,  # grams
         drag_coefficient=0.65
     )
-    medium_motor = Motor(
+    b44 = Motor(
         name="B4-4",
         diameter_mm=18,
         length_mm=70,
@@ -573,26 +573,38 @@ if __name__ == "__main__":
         total_mass=18,  # grams
         propellant_mass=7.6  # grams
     )
+    b64 = Motor(
+        name="B6-4",
+        diameter_mm=18,
+        length_mm=70,
+        total_impulse=5,  # N-sec
+        thrust_duration=0.8,  # seconds
+        max_thrust=15.0,  # N
+        time_delay=4,  # seconds
+        max_lift_weight=113,  # grams
+        total_mass=17.9,  # grams
+        propellant_mass=6.5  # grams
+    )
 
-    # big_rocket = Rocket(
-    #     name="Big Rocket",
-    #     length_mm=500,
-    #     diameter_mm=29,
-    #     mass=50,  # grams
-    #     drag_coefficient=0.65
-    # )
-    # big_motor = Motor(
-    #     name="F15-8",
-    #     diameter_mm=24,
-    #     length_mm=70,
-    #     total_impulse=5.0,  # N-sec
-    #     thrust_duration=0.75,  # seconds
-    #     max_thrust=15.0,  # N
-    #     time_delay=7,  # seconds
-    #     max_lift_weight=112,  # grams
-    #     total_mass=25,  # grams
-    #     propellant_mass=10.0  # grams
-    # )
+    big_rocket = Rocket(
+        name="Big Rocket",
+        length_mm=500,
+        diameter_mm=29,
+        mass=486.4,  # grams
+        drag_coefficient=0.65
+    )
+    big_motor = Motor(
+        name="F15-8",
+        diameter_mm=29,
+        length_mm=114,
+        total_impulse=49.61,  # N-sec
+        thrust_duration=3.45,  # seconds
+        max_thrust=30,  # N
+        time_delay=8,  # seconds
+        max_lift_weight=425,  # grams
+        total_mass=104.6,  # grams
+        propellant_mass=60.0  # grams
+    )
 
 
     # Run simulation
@@ -600,6 +612,6 @@ if __name__ == "__main__":
     # results = simulator.run_simulation()
     # print_results(results)
 
-    simulator = FlightSimulator(medium_rocket, medium_motor)
+    simulator = FlightSimulator(big_rocket, big_motor)
     results = simulator.run_simulation()
     print_results(results)
